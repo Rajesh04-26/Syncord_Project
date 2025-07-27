@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Syncord</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav class="nav">
+  <a href="/">Home</a>
+  </nav>
+
+  <h1>
+    <img src="https://api.iconify.design/simple-icons/scribd.svg" alt="Logo">
+    Syncord
+  </h1>
+
+  <% for (let chat of chats) { %>
+    <div class="chat">
+      <div class="top-row">
+        <p><strong>From:</strong> <i><%= chat.from %></i></p>
+        <p>🕒<%= chat.Created_at.toString().split(" ")[4] %>
+        &nbsp;&nbsp;📅<%= chat.Created_at.toString().split(" ").slice(0, 4).join("-") %>
+        </p>
+      </div>
+
+      <div class="message">
+        <p><%= chat.message %></p>
+        <div>
+          <form method="GET" action="/chats/<%= chat._id %>/edit">
+            <button>edit</button>
+          </form>
+          <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE">
+            <button>delete</button>
+          </form>
+        </div>
+      </div>
+
+      <p><strong>To:</strong> <i><%= chat.to %></i></p>
+    </div>
+    <br><br>
+  <% } %>
+
+  <form class="new" method="POST" action="/chats">
+    <div class="msgbox">
+      <input type="text" name="from" placeholder="From" required>
+      <input type="text" name="to" placeholder="To" required>
+    </div>
+    <div class="msgbox">
+      <textarea name="message" placeholder="Write your message" rows="3" required></textarea>
+      <button type="submit" class="send-btn">
+        <img src="https://api.iconify.design/material-symbols/send-rounded.svg?color=black" alt="Send Icon">Send
+      </button>
+    </div>
+  </form>
+
+  <footer class="footer">
+    <p>&copy; <%= new Date().getFullYear() %> Syncord. All rights reserved.</p>
+  </footer>
+  
+</body>
+</html>

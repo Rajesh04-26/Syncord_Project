@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Chat</title>
+    <link rel="stylesheet" href="/edit.css">
+</head>
+<body>
+    <h1>Chat Details</h1>
+
+    <p>Chat ID: <b><%= chat._id %></b></p>
+    <p>From: <b><%= chat.from %></b></p>
+    <p>To: <b><%= chat.to %></b></p>
+    <p>Message:</p>
+    <div style="border: 1px solid #ccc; padding: 10px; max-width: 500px;">
+        <%= chat.message %>
+    </div>
+
+    <footer style="margin-top: 30px; color: #777;">
+        <hr>
+        <p>Chat App &copy; 2025</p>
+    </footer>
+</body>
+</html>

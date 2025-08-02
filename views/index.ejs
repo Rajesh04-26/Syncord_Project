@@ -36,6 +36,9 @@
           <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE">
             <button>delete</button>
           </form>
+          <form method="GET" action="/chats/<%= chat._id %>">
+            <button>show</button>
+          </form>
         </div>
       </div>
 
@@ -46,11 +49,11 @@
 
   <form class="new" method="POST" action="/chats">
     <div class="msgbox">
-      <input type="text" name="from" placeholder="From" required>
-      <input type="text" name="to" placeholder="To" required>
+      <input type="text" name="from" placeholder="From">
+      <input type="text" name="to" placeholder="To">
     </div>
     <div class="msgbox">
-      <textarea name="message" placeholder="Write your message" rows="3" required></textarea>
+      <textarea name="message" placeholder="Write your message" rows="3"></textarea>
       <button type="submit" class="send-btn">
         <img src="https://api.iconify.design/material-symbols/send-rounded.svg?color=black" alt="Send Icon">Send
       </button>

@@ -99,6 +99,7 @@ body {
 }
 
 .foot {
+  width: 100%;
   padding: 10px;
   text-align: center;
   font-size: 0.9em;

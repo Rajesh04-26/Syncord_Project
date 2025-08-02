@@ -1,4 +1,21 @@
-<% layout("/layouts/boilerplate") -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Syncord</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+  <a href="/">Home</a>
+  </nav>
+
+  <h1>
+    <img src="https://api.iconify.design/simple-icons/scribd.svg" alt="Logo">
+    Syncord
+  </h1>
   <% for (let chat of chats) { %>
     <div class="chat">
       <div class="top-row">
@@ -40,4 +57,8 @@
       </button>
     </div>
   </form>
-
+<div>
+<footer class="foot">&copy; <%= new Date().getFullYear() %> Syncord. All rights reserved.</footer>
+</div>
+</body>
+</html>

@@ -1,5 +1,13 @@
-<% layout("/layouts/boilerplate") -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syncord</title>
+    <link rel="stylesheet" href="/edit.css" >
+</head>
 <body>
+    <div class="content">
     <h1>Edit Your Chat</h1>
     <p>Chat_ID : <b><%= chat._id %></b></p>
     <p>This chat was sent from <b><%= chat.from %></b> to <b><%= chat.to %></b>.
@@ -8,5 +16,8 @@
         <textarea name="msg" rows="5" cols="50"><%= chat.message %></textarea>
         <button>edit</button>
     </form>
+    </div>
+    
+<footer class="foot">&copy; <%= new Date().getFullYear() %> Syncord. All rights reserved.</footer>
 </body>
 </html>

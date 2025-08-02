@@ -164,3 +164,12 @@ form.new button:hover {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 50px;
 }
+
+.foot {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9em;
+  background: #0c0218;
+  color: #bbb;
+  margin-top: auto;
+}

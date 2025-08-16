@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "22.16.0",
+  },
   "name": "mongodb",
   "version": "1.0.0",
   "description": "A Node.js app with Express and MongoDB",
@@ -7,9 +10,6 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
-  },
-  "engines": {
-    "node": ">=18.0.0"
   },
   "dependencies": {
     "ejs": "^3.1.10",
